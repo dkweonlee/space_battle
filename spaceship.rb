@@ -15,7 +15,9 @@ class SpaceShip
   puts spaceship_name
   p @health
   end
-
+  def shield_on
+    
+  end
   def take_off (count_down = 5)
     until count_down <= 0
       puts "#{count_down}"
@@ -24,22 +26,7 @@ class SpaceShip
     end
     puts @spaceship_name + " blasting off!!!"
   end
-  def user_command (enemy)
-      user_input = gets.chomp
-  if user_input == 'takeoff'
-    take_off
-  elsif user_input == 'fire'
-    fires_on (enemy)
-  elsif user_input == 'help'
-    puts '----list of commands----'
-    p 'take off = takeoff ', 'fire = fire'
-  else
-    puts 'wrong command'
-    puts "type 'help' to see more commands"
-  end
-  end
 end
-defiant = SpaceShip.new("defiant", 10)
 
 
 # defiant.take_off 5
